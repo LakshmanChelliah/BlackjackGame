@@ -15,6 +15,7 @@ The dealer must hit until they have a hand value of 17 or higher. If the dealer'
 - Double Down Functionality: Players can choose to double their bet and receive one more card.
 - Multi Ace auto value: The game automatically assigns the best value for Aces in a player's hand (either 1 or 11).
 - Dealer hits on x: The dealer must hit until they have a hand value of 17 or higher.
+- Error Handling
 # Dependencies
 Pygame
 Random

@@ -2,6 +2,7 @@
 import random
 import math
 
+# Authors: Lakshman Chelliah, Dylan Dominic
 
 SHOE_SIZE = 6
 DEALER_HIT_ON = 16
