@@ -4,6 +4,8 @@ import math
 
 # Authors: Lakshman Chelliah, Dylan Dominic
 # Version 0.0.1
+# Date: 2023-03-08
+
 SHOE_SIZE = 6
 DEALER_HIT_ON = 16
 
