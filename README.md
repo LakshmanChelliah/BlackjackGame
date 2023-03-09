@@ -25,7 +25,7 @@ To run the game, run the blackjack.py file in your Python environment.
 
 Once the game is started, follow the on-screen instructions to play.
 
-Good luck, and have fun!
+Good luck, and have fun
 
 # Change Log
 - 0.0 -> Initial Release [@LakshmanChelliah](https://github.com/LakshmanChelliah)
