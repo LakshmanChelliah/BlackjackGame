@@ -30,3 +30,4 @@ Good luck, and have fun!
 # Change Log
 - 0.0 -> Initial Release [@LakshmanChelliah](https://github.com/LakshmanChelliah)
 - 0.1 -> Bug Fixes and Error Handling [@DylanDominic](https://github.com/DylanD2402)
+- 0.2 -> Added Delays when Dealer Hits, Added Count to Players Hand, Added Comments [@LakshmanChelliah](https://github.com/LakshmanChelliah)

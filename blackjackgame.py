@@ -1,6 +1,7 @@
 
 import random
 import math
+import time
 
 # Authors: Lakshman Chelliah, Dylan Dominic
 # Version 0.0.1
@@ -57,7 +58,7 @@ def checkScore(hand) -> int:
 def hitCard (hand, deck)->bool:
     hand.append(deck.pop())
     print("Player Cards")
-    print(hand)
+    print(str(hand) + " -> " + str(checkScore(hand)))
     while True:
         if (checkScore(hand) > 21):
             return False
@@ -79,10 +80,12 @@ def dealerTurn(hand, deck)->None:
     print("Dealers Cards")
     print(hand)
     
-    while (checkScore(hand) < DEALER_HIT_ON):
+    while (checkScore(hand) <= DEALER_HIT_ON):
         print("Dealer HIT")
+        time.sleep(3)
         hand.append(deck.pop())
         print(hand)
+        time.sleep(3)
       
         
 #Evalutes round and returns:
@@ -137,7 +140,7 @@ def startRound(bet, balance, deck)->int:
     
     playerhand = [deck.pop(),deck.pop()]
     print("Your Hand:")
-    print(playerhand)
+    print(str(playerhand) + " -> " + str(checkScore(playerhand)))
     print("\nDealer's Up Card:")
     print("["+dealerhand[0]+"]\n")
     
@@ -157,7 +160,7 @@ def startRound(bet, balance, deck)->int:
             else:
                 playerhand.append(deck.pop())
                 print("Player Cards")
-                print(playerhand)                
+                print(str(playerhand) + " -> " + str(checkScore(playerhand)))              
                 
                 bet = bet + bet
                 break
@@ -204,11 +207,9 @@ if __name__ == '__main__':
 
         try: 
             balance = int(balance)
-            startGame(balance)
-            break
         except:
-            print("Invalid Input")
+            print("Invalid Input: balance must be a number")
+            
+        startGame(balance)
 
 print("Game Over")
-    
-    
