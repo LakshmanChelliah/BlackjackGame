@@ -2,11 +2,24 @@
 import random
 import math
 import time
+import sys
+
 '''
 Authors: Lakshman Chelliah, Dylan Dominic
 Version 0.0.2
 Date: 2023-03-08
 '''
+
+import sys
+
+# Define the different colors
+class colors:
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    END = '\033[0m'
+
+
 
 #How many Decks there are
 SHOE_SIZE = 6
@@ -173,7 +186,7 @@ def startRound(bet, balance, deck)->int:
 
     print("Your Hand:")
     print(str(playerhand) + " -> " + str(checkScore(playerhand)))
-    print("\nDealer's Up Card:")\
+    print("\nDealer's Up Card:")
     
     #Show Dealer's Up Card
     print("["+dealerhand[0]+"]\n")
@@ -199,7 +212,7 @@ def startRound(bet, balance, deck)->int:
                 bet = bet + bet
                 break
         else:
-            print("Invalid Input")
+            print(colors.RED + "Invalid Input" + colors.END)
             
 
             
@@ -231,7 +244,7 @@ def startGame(balance)->None:
             bet = int(bet)
 
         except:
-            print("Invalid Input")
+            print(colors.RED + "Invalid Input" + colors.END)
             continue
         if (bet>balance):
             print("Not enough money!")
@@ -249,8 +262,9 @@ if __name__ == '__main__':
         try: 
             balance = int(balance)
         except:
-            print("Invalid Input: balance must be a number")
+            print(colors.RED + "Invalid Input: balance must be a number " + colors.END)
+            continue
             
         startGame(balance)
 
-print("Game Over")
+print(colors.RED + "Game Over" + colors.END)
