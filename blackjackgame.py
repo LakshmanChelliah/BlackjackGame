@@ -144,9 +144,9 @@ def evalRound(player, dealer)->int:
     #If both busts
     elif (playerBust and dealerBust):
         print(colors.CYANB+"Player: "+colors.END + str(playerCount) + colors.REDB+"\nDealer: "+colors.END + str(dealerCount))
-        print("BOTH BUST")
-        print("PUSH")
-        return 0
+        print(colors.REDBB+"YOU BUST"+colors.END)
+        print(colors.REDBB+"YOU LOST"+colors.END)
+        return -1
     #If Plaver gets higher
     elif (playerCount > dealerCount):
         if (len(player)==2 and playerCount==21):
